@@ -1,0 +1,28 @@
+{
+  "name": "module-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "generate-module": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "author": "Felipe Pereira Eduardo",
+  "license": "ISC",
+  "description": "This is a project to generate module to the new module architecture",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
