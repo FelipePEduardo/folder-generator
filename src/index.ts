@@ -65,11 +65,9 @@ program
       }
 
       layers.forEach((folder) => {
-        let folderPaths = [targetDir, folder.folderName];
+        const folderPaths = [targetDir, folder.folderName];
 
         recursiveFolder(folder, folderPaths);
-
-        folderPaths = [];
       });
 
       console.log(

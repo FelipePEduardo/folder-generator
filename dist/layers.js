@@ -34,6 +34,10 @@ export function generateLayers(captalizedName) {
             childFolder: [
                 {
                     folderName: 'contracts',
+                    childFolder: [
+                        { folderName: 'consumer' },
+                        { folderName: 'use-cases' },
+                    ],
                 },
                 {
                     folderName: 'use-cases',
@@ -65,10 +69,7 @@ export function generateLayers(captalizedName) {
                         { folderName: 'consumer' },
                         {
                             folderName: 'interfaces',
-                            childFolder: [
-                                { folderName: 'consumer' },
-                                { folderName: 'publisher' },
-                            ],
+                            childFolder: [{ folderName: 'publisher' }],
                         },
                         { folderName: 'publisher' },
                     ],
@@ -87,7 +88,12 @@ export function generateLayers(captalizedName) {
                 },
                 {
                     folderName: 'repositories',
-                    files: [{ fileName: `${captalizedName}.Repository.ts`, fileContent: `import { injectable } from 'inversify';\nimport { I${captalizedName}Repository } from '../../domain/repositories/I${captalizedName}.Repository';\nimport BaseRepository from '@shared/infraestructure/database/Base.Respository';\n\n@injectable()\nexport class ${captalizedName}Repository extends BaseRepository implements I${captalizedName}Repository {\n  async handle(query: QueryOptions, contextParams: ContextParams) {\n    throw new Error('Method not implemented.');\n  } \n}` }],
+                    files: [
+                        {
+                            fileName: `${captalizedName}.Repository.ts`,
+                            fileContent: `import { injectable } from 'inversify';\nimport { I${captalizedName}Repository } from '../../domain/repositories/I${captalizedName}.Repository';\nimport BaseRepository from '@shared/infraestructure/database/Base.Respository';\n\n@injectable()\nexport class ${captalizedName}Repository extends BaseRepository implements I${captalizedName}Repository {\n  async handle(query: QueryOptions, contextParams: ContextParams) {\n    throw new Error('Method not implemented.');\n  } \n}`,
+                        },
+                    ],
                 },
                 {
                     folderName: 'types',

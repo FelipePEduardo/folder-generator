@@ -42,9 +42,8 @@ program
             }
         }
         layers.forEach((folder) => {
-            let folderPaths = [targetDir, folder.folderName];
+            const folderPaths = [targetDir, folder.folderName];
             recursiveFolder(folder, folderPaths);
-            folderPaths = [];
         });
         console.log(chalk.green.bold(`\n🚀 Módulo "${name}" gerado com sucesso em:`));
         console.log(chalk.cyan(targetDir));
