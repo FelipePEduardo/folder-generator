@@ -37,7 +37,7 @@ export function generateLayers(captalizedName: string): LayersType[] {
         {
           folderName: 'contracts',
           childFolder: [
-            { folderName: 'consumer' },
+            { folderName: 'broker' },
             { folderName: 'use-cases' },
           ],
         },
