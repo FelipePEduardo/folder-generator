@@ -12,7 +12,7 @@ apps/
               ├── modules/
 ```  
 Like this:              
-![](image.png) 
+![](./public/folder-structure.png) 
 
 - **Execution Path**: You must execute the command from the **root** of your project. _The script uses your current directory to locate the destination folders._
 
@@ -26,7 +26,7 @@ Run the following command in your terminal:
 ```bash
 npx github:FelipePEduardo/folder-generator moduleName
 ```
-**Note**: Replace `moduleName` with the actual name of the module you want to create.
+**Note**: Replace `moduleName` with the actual name of the module you want to create. 
 
 ### 2. Creating an Alias (Recommended)
 To avoid typing the full command every time, you can create a shortcut:
@@ -44,4 +44,34 @@ function fg {
 fg moduleName
 ```
 
-You can choose the function name, that will be the alias. Just remember to change the command when you need to execute it.
+You can choose the function name, that will be the alias. Just remember to change the command when you need to execute it. 
+
+## Input and Output
+
+```md
+<!-- ✅ -->
+generate-module test  
+```
+![alt text](./public/example-2.png)
+
+```md
+<!-- ✅ -->
+generate-module Test  
+```
+![alt text](./public/example-3.png)
+
+If your module contains more than one word, you must use `-` to separate the words, otherwise will not work properly.
+
+```md
+<!-- ❌ -->
+generate-module newTest 
+```
+![alt text](./public/example-1.png)
+
+**Note**: module name is wrong
+
+```md
+<!-- ✅ -->
+generate-module new-test 
+```
+![alt text](./public/example-4.png)
