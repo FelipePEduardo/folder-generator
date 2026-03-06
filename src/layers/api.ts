@@ -1,4 +1,6 @@
-export const generateApiLayer = (captalizedName: string) => ({
+import { LayersType } from '../@types/layersType';
+
+export const generateApiLayer = (captalizedName: string): LayersType => ({
   folderName: 'api',
   childFolder: [
     {

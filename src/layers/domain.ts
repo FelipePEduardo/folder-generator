@@ -1,4 +1,6 @@
-export const generateDomainLayer = (captalizedName: string) => ({
+import { LayersType } from '../@types/layersType';
+
+export const generateDomainLayer = (captalizedName: string): LayersType => ({
   folderName: 'domain',
   childFolder: [
     { folderName: 'daos' },

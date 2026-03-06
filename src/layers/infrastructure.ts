@@ -1,16 +1,13 @@
-export const generateInfraestructureLayer = (captalizedName: string) => ({
+import { LayersType } from '../@types/layersType';
+
+export const generateInfraestructureLayer = (
+  captalizedName: string,
+): LayersType => ({
   folderName: 'infra',
   childFolder: [
     {
       folderName: 'broker',
-      childFolder: [
-        { folderName: 'consumer' },
-        {
-          folderName: 'interfaces',
-          childFolder: [{ folderName: 'publisher' }],
-        },
-        { folderName: 'publisher' },
-      ],
+      childFolder: [{ folderName: 'consumer' }, { folderName: 'publisher' }],
     },
     {
       folderName: 'daos',
