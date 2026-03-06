@@ -60,7 +60,7 @@ generate-module Test
 ```
 ![alt text](./public/example-3.png)
 
-If your module contains more than one word, you must use `-` to separate the words, otherwise will not work properly.
+If your module contains more than one word, you must use `-` to separate the words, otherwise it will not work properly.
 
 ```md
 <!-- ❌ -->
